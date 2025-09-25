@@ -1,14 +1,20 @@
-const nav = () => {
+import CustomButton from "./customButton";
+
+const Nav = () => {
   return (
     <header>
-      <div className="wrapper flex justify-between items-center">
+      <div className="wrapper flex items-center justify-between py-6 max-sm:mb-18">
         <div>
-          <h3>Luxora</h3>
+          <h3 className="font-dancing text-tertiary text-5xl font-bold capitalize">
+            Luxora
+          </h3>
         </div>
 
         <nav>
           <ul>
-            <li>Login</li>
+            <li>
+              <CustomButton text="Login" href="login" />
+            </li>
           </ul>
         </nav>
       </div>
@@ -16,4 +22,4 @@ const nav = () => {
   );
 };
 
-export default nav;
+export default Nav;
