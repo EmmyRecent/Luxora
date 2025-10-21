@@ -1,4 +1,4 @@
-# 🚀 Flying-Box
+# 🏡 Luxuora
 
 **Luxuora** is a real estate web application designed to help individuals looking to buy, rent or sell properties.
 
