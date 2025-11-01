@@ -12,10 +12,19 @@ import {
   SidebarMenu,
   SidebarMenuButton,
   SidebarMenuItem,
+  useSidebar,
 } from "./ui/sidebar";
 
 const AppSidebar = () => {
   const pathname = usePathname();
+  const { isMobile, toggleSidebar } = useSidebar();
+
+  // Hide sidebar when mobile sidebar is clicked.
+  const handleSidebarToggle = () => {
+    if (isMobile) {
+      toggleSidebar();
+    }
+  };
 
   return (
     <Sidebar className="border-none" variant="floating">
@@ -44,6 +53,7 @@ const AppSidebar = () => {
 
                         return basePath === item.to;
                       })()}
+                      onClick={handleSidebarToggle}
                     >
                       <a
                         href={item.to}

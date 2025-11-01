@@ -9,9 +9,11 @@ const DashboardLayout = ({
       <AppSidebar />
 
       <main className="m-4 w-full overflow-x-auto lg:m-6">
-        {children}
+        <div className="mb-4">
+          <SidebarTrigger />
+        </div>
 
-        <SidebarTrigger />
+        {children}
       </main>
     </SidebarProvider>
   );
